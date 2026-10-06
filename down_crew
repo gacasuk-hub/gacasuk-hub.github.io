@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streamers Grid</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px 20px 0 20px;
+            box-sizing: border-box;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 1000px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            width: 100%;
+        }
+
+        .card {
+            background-color: #252526;
+            border: 1px solid #3c3c3c;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            border-color: #007acc;
+        }
+
+        .photo-link {
+            display: block;
+            cursor: pointer;
+            overflow: hidden;
+            height: 220px;
+            background-color: #1a1a1a;
+        }
+
+        .photo-link img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .photo-link:hover img {
+            transform: scale(1.05);
+        }
+
+        .info {
+            padding: 15px;
+        }
+
+        .name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #569cd6;
+            margin: 0 0 8px 0;
+        }
+
+        .role {
+            font-size: 0.9rem;
+            color: #858585;
+            margin: 0;
+        }
+
+        footer {
+            width: 100vw;
+            background-color: #007acc;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 15px 0;
+            margin-top: auto;
+            font-size: 0.95rem;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ffffff;
+            background-color: #252526;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-content">
+        <h1>Команда стримеров</h1>
+
+        <div class="grid-container">
+
+            <div class="card">
+                <a class="lyoha.jpg" href="https://instagram.com" target="_blank" title="Перейти к биографии dangerlyoha">
+                    <img src="https://githubusercontent.com" alt="dangerlyoha" onerror="this.src='https://placehold.co'">
+                </a>
+                <div class="info">
+                    <p class="name">dangerlyoha</p>
+                    <p class="role">Алексей Шпак (Шарф)</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <a class="morda.jpg" href="https://metaratings.ru" target="_blank" title="Перейти к биографии morphe_ya">
+                    <img src="https://githubusercontent.com" alt="morphe_ya" onerror="this.src='https://placehold.co'">
+                </a>
+                <div class="info">
+                    <p class="name">morphe_ya</p>
+                    <p class="role">Валерия Высоцкая (Морфи)</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <a class="murz.jpg" href="https://twitch-news.ru" target="_blank" title="Перейти к биографии murzofix">
+                    <img src="https://githubusercontent.com" alt="murzofix" onerror="this.src='https://placehold.co'">
+                </a>
+                <div class="info">
+                    <p class="name">murzofix</p>
+                    <p class="role">Аркадий Алехно (Мурзик)</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <a class="kopster.jpg" href="https://instagram.com" target="_blank" title="Перейти к биографии steepkop">
+                    <img src="https://githubusercontent.com" alt="steepkop" onerror="this.src='https://placehold.co'">
+                </a>
+                <div class="info">
+                    <p class="name">steepkop</p>
+                    <p class="role">Данил Копстипов (Бэн)</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <img class="ya.jpg" src="https://placehold.co" alt="Фото автора" onerror="this.src='https://placehold.co'">
+        <span>Автор проекта: <strong>Петряшов Андрей </strong></span>
+    </footer>
+
+</body>
+</html>
